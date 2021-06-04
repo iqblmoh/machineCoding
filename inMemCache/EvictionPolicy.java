@@ -1,4 +1,4 @@
-package test;
+package inMemCache;
 
 public enum EvictionPolicy {
     LRU;

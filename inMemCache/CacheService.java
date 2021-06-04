@@ -1,4 +1,4 @@
-package test;
+package inMemCache;
 
 public class CacheService {
     private static CacheService instance=null;

@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f23a11a-abe5-499b-b796-4ad7137a26a8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flipPod/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/flipPod/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testCab/USER.java" beforeDir="false" afterPath="$PROJECT_DIR$/testCab/USER.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inMemCache/Cache.java" beforeDir="false" afterPath="$PROJECT_DIR$/inMemCache/Cache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inMemCache/CacheDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/inMemCache/CacheDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inMemCache/CacheService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inMemCache/CacheService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inMemCache/DriverClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/inMemCache/DriverClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inMemCache/EvictionPolicy.java" beforeDir="false" afterPath="$PROJECT_DIR$/inMemCache/EvictionPolicy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
