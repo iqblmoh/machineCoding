@@ -1,4 +1,6 @@
-package cab;
+package cabBooking.entity;
+
+import cabBooking.enums.Gender;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +10,7 @@ public class Rider extends User {
 	private Location location;
 	private List<Ride> rides = new ArrayList<Ride>();
 	
-	public Rider(int id,String name, int age, Gender gender, Location location) {
+	public Rider(int id, String name, int age, Gender gender, Location location) {
 		super(id,name,age,gender);// TODO Auto-generated constructor stub;
 		this.location = location;
 	}

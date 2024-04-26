@@ -1,6 +1,6 @@
 package testCab;
 
-import cab.DriverNotAvailableException;
+import cabBooking.service.CabBookingService;
 
 public class DriverClass {
 
@@ -21,7 +21,7 @@ public class DriverClass {
 
         try {
             rideService.bookRide(rider.getId(),new Location(0,0) , new Location(0,1));
-        } catch (DriverNotAvailableException e) {
+        } catch (CabBookingService.DriverNotAvailableException e) {
             System.out.println("No driver available, please try later");
             e.printStackTrace();
         }

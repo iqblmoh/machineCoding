@@ -1,4 +1,4 @@
-package cab;
+package cabBooking.entity;
 
 public class Device {
 	private Location location;

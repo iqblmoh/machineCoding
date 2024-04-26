@@ -1,9 +1,11 @@
-package cab;
+package cabBooking.entity;
 
-public class Car extends Vehicle{
+import cabBooking.enums.VehicleType;
 
-	public Car(String vehicleName,String vehicleNumber,Location location) {
-		super(vehicleName,vehicleNumber,location,VehicleType.CAR);
+public class Car extends Vehicle {
+
+	public Car(String vehicleName, String vehicleNumber, Location location) {
+		super(vehicleName,vehicleNumber,location, VehicleType.CAR);
 	}
 	
 	

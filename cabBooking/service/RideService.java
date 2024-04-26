@@ -1,4 +1,10 @@
-package cab;
+package cabBooking.service;
+
+import cabBooking.dao.UserDAO;
+import cabBooking.entity.Driver;
+import cabBooking.entity.Location;
+import cabBooking.entity.Ride;
+import cabBooking.entity.Rider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,11 +30,11 @@ public class RideService {
 	}
 	
 
-	public Driver bookRide(int riderId,Location fromLocation,Location toLocation,UserDAO user) throws DriverNotAvailableException {
+	public Driver bookRide(int riderId, Location fromLocation, Location toLocation, UserDAO user) throws CabBookingService.DriverNotAvailableException {
 		Rider rider = user.getRiderMap().get(riderId);
 		this.user = user;
 		List<Driver> driver = fetchAvailableDrivers(fromLocation);
-		if(driver.isEmpty()) throw new DriverNotAvailableException();
+		if(driver.isEmpty()) throw new CabBookingService.DriverNotAvailableException();
 		driver.get(0).setAvailable(false);
 		
 		Ride ride = new Ride(driver.get(0),rider,fromLocation,toLocation);

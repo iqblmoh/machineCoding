@@ -1,4 +1,13 @@
-package cab;
+package cabBooking.dao;
+
+import cabBooking.service.CabBookingService;
+import cabBooking.entity.Vehicle;
+import cabBooking.entity.Driver;
+import cabBooking.entity.Location;
+import cabBooking.entity.Rider;
+import cabBooking.enums.Gender;
+import cabBooking.exception.CreateException;
+import cabBooking.exception.VehicleDoesNotExistException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,11 +16,11 @@ public class UserDAO {
 
 	public static UserDAO userDAO = null;
 	
-	public Map<Integer,Rider> riderMap = new HashMap<Integer,Rider>();
+	public Map<Integer, Rider> riderMap = new HashMap<Integer,Rider>();
 	
-	public Map<Integer,Driver> driverMap = new HashMap<Integer,Driver>();
+	public Map<Integer, Driver> driverMap = new HashMap<Integer,Driver>();
 	
-	public Map<String,Vehicle> vehicleMap = new HashMap<String,Vehicle>();
+	public Map<String, Vehicle> vehicleMap = new HashMap<String,Vehicle>();
 	
 	private UserDAO() {
 
@@ -25,7 +34,7 @@ public class UserDAO {
 		return userDAO;
 	}
 	
-	public Driver createDriver(int id,String name,int age,Gender gender,Vehicle vehicle) throws CreateException{
+	public Driver createDriver(int id, String name, int age, Gender gender, Vehicle vehicle) throws CreateException {
 		Driver driver = new Driver(id,name,age,gender,vehicle);
 		if(driver == null || driverMap.containsKey(driver.getId())) {
 			throw new CreateException();
@@ -45,7 +54,7 @@ public class UserDAO {
 		return rider;
 	}
 	
-	public boolean updateLocation(String vehicleNumber, Location location) throws VehicleDoesNotExistException{
+	public boolean updateLocation(String vehicleNumber, Location location) throws VehicleDoesNotExistException {
 		if(vehicleMap.containsKey(vehicleNumber)) {
 			vehicleMap.get(vehicleNumber).setLocation(location);
 			return true;
@@ -54,11 +63,11 @@ public class UserDAO {
 		}
 	}
 
-	public boolean toggleAvailability(int id,boolean val) throws DriverNotFoundException {
+	public boolean toggleAvailability(int id,boolean val) throws CabBookingService.DriverNotFoundException {
 		if(driverMap.containsKey(id)) {
 			driverMap.get(id).setAvailable(val);
 		}else {
-			throw new DriverNotFoundException();
+			throw new CabBookingService.DriverNotFoundException();
 		}
 		return true;
 	}

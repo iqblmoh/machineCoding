@@ -1,4 +1,12 @@
-package cab;
+package cabBooking.service;
+
+import cabBooking.entity.Driver;
+import cabBooking.entity.Location;
+import cabBooking.entity.Rider;
+import cabBooking.entity.Vehicle;
+import cabBooking.enums.Gender;
+import cabBooking.exception.CreateException;
+import cabBooking.exception.VehicleDoesNotExistException;
 
 public class CabBookingService {
 
@@ -20,11 +28,11 @@ public class CabBookingService {
 		return cabBookingService;
 	}
 
-	public Driver registerDriver(int id,String name,int age,String gender,Vehicle vehicle) throws CreateException {
+	public Driver registerDriver(int id, String name, int age, String gender, Vehicle vehicle) throws CreateException {
 		Driver driver = null;
 		try{
 			
-			driver =  userService.registerDriver(id,name,age,Gender.identifyGender(gender),vehicle);
+			driver =  userService.registerDriver(id,name,age, Gender.identifyGender(gender),vehicle);
 		}catch(CreateException ex) {
 			//log
 
@@ -32,7 +40,7 @@ public class CabBookingService {
 		return driver;
 	}
 	
-	public Rider registerRider(int id,String name,int age,String gender,Location location) throws CreateException {
+	public Rider registerRider(int id, String name, int age, String gender, Location location) throws CreateException {
 		Rider rider = null;
 		try{
 			
@@ -72,7 +80,13 @@ public class CabBookingService {
 		}
 		return null;
 	}
-	
-	
-	
+
+
+	public static class DriverNotAvailableException extends Exception{
+
+	}
+
+	public static class DriverNotFoundException extends Exception{
+
+	}
 }

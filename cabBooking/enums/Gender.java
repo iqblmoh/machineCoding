@@ -1,4 +1,4 @@
-package cab;
+package cabBooking.enums;
 
 public enum Gender {
    MALE,FEMALE;

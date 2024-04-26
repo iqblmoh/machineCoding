@@ -1,4 +1,6 @@
-package cab;
+package cabBooking.entity;
+
+import cabBooking.enums.VehicleType;
 
 public abstract class Vehicle {
 	private String vehicleName;

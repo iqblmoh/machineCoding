@@ -1,6 +1,6 @@
-package cab;
+package cabBooking.entity;
 
-import java.util.Random;
+import cabBooking.enums.Gender;
 
 public abstract class User {
 	

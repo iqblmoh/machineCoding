@@ -1,12 +1,14 @@
-package cab;
+package cabBooking.entity;
 
-public class Driver extends User{
+import cabBooking.enums.Gender;
+
+public class Driver extends User {
 	
 	private Vehicle vehicle;
 	private boolean isAvailable;
 	private Kyc kyc;
 	
-	public Driver(int id,String name, int age, Gender gender,Vehicle vehicle) {
+	public Driver(int id, String name, int age, Gender gender, Vehicle vehicle) {
 		super(id,name,age,gender);
 		this.vehicle = vehicle;
 		

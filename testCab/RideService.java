@@ -1,8 +1,6 @@
 package testCab;
 
-import cab.DriverNotAvailableException;
-
-import java.util.List;
+import cabBooking.service.CabBookingService;
 
 public class RideService {
     private static RideService rideService = null;
@@ -25,11 +23,11 @@ public class RideService {
         return Math.abs(l1.getX() - l2.getX()) + Math.abs(l1.getY() - l2.getY());
     }
 
-    public  Driver bookRide(int riderId, Location from, Location to) throws DriverNotAvailableException {
+    public  Driver bookRide(int riderId, Location from, Location to) throws CabBookingService.DriverNotAvailableException {
         Rider rider = userDao.getRiderMap().get(riderId);
         Driver driver = fetchAllDrivers(from);
         if(driver==null){
-            throw new  DriverNotAvailableException();
+            throw new CabBookingService.DriverNotAvailableException();
         }
         driver.setAvailable(false);
         Ride ride = new Ride(IDgenerator.getId(),rider,driver,from,to);
