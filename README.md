@@ -4,4 +4,9 @@ There is no free website to provide complete guide for machine coding round so I
 
 problem statements 
 Food ordering : https://docs.google.com/document/d/1Bmkz9omByHqVvwU45cvkBRSwJAPKw9yaDsRlEnCg_lg/edit#heading=h.i01wbcufj0mj
+
+
 Tinder : https://docs.google.com/document/d/1IFpm0lidY9kwpzd8r8vQSpVUEuTtE4DqFmGPvuOuj4c/edit
+
+
+URL Shortner : https://docs.google.com/document/d/17dQuVFAcuuaUg0dd72MwFXyJr315RSquMOblLr8Df1U/edit?usp=sharing
