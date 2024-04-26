@@ -1,4 +1,4 @@
-package flipPod;
+package lockerManagementSystem;
 
 public enum LockerSize {
 

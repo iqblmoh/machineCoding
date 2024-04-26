@@ -1,4 +1,4 @@
-package flipPod;
+package lockerManagementSystem;
 
 public class IdGenerator {
     private static int id=0;
