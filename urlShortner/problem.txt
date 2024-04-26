@@ -1,0 +1,36 @@
+﻿Problem Definition:
+Design and implement a URL shortener application that allows users to shorten long URLs into shorter, more manageable links. Each shortened URL should redirect to the original long URL when accessed. Users should also have the ability to manage their shortened URLs, including creating, editing, and deleting them.
+
+
+Operations:
+
+
+Onboard clients: Allow new users to onboard 
+DeActivate/Activate Clients:
+Shorten URL: Allow users to shorten a long URL to create a unique, shorter link.
+Redirect: Redirect users from the shortened URL to the original long URL.
+Custom URLs: Provide custom shorten URL 
+
+
+
+
+Use Cases:
+
+
+Onboard API:
+Activate / Deactivate API;
+Shorten URL: Users can shorten long URLs to create compact links suitable for sharing.
+Redirect: Users can access the original long URL by visiting the shortened link.
+
+
+
+
+Expectations:
+
+
+Demonstrate functionality through a main driver program or test cases.
+Ensure the code is functionally correct, complete, readable, modular, and testable.
+Properly handle edge cases such as invalid URLs or duplicate shortened links.
+The output can be written to a file or STDOUT, with interim/output data stored in-memory.
+Internet usage should be restricted to syntax lookup.
+Discuss any doubts with the interviewer.
